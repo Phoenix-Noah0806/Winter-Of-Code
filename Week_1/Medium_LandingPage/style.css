@@ -32,6 +32,9 @@ nav ul{
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
     list-style: none;
+    line-height: 20px;
+    font-size: 14px;
+    color: #242424;
 }
 nav ul li{
     justify-content: space-between;
