@@ -1,0 +1,20 @@
+*{
+
+}
+.new{
+    height: 200px;
+    width: 200px;
+    background-color: red;
+}
+/* .new2{
+    height: 200px;
+    width: 200px;
+    background-color: rgb(0, 0, 0);
+} */
+body{
+    & .new2{
+        height: 200px;
+        width: 200px;
+        background-color: rgb(0, 0, 0);
+    }
+}

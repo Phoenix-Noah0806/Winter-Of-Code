@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Project 4</title>
+    <style>
+      @font-face {
+        font-family: "Made Soul Maze";
+        src: url("/Week_1/Tailwind_Project/public/made_soulmaze/MADE\ Soulmaze\ PERSONAL\ USE.otf")
+          format("opentype");
+        font-weight: normal;
+        font-style: normal;
+      }
+      .marquee {
+        animation: marquee 12s infinite linear;
+        font-family: "Made Soul Maze", sans-serif;
+      }
+      @keyframes marquee {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translate(-50%);
+        }
+      }
+      body {
+        font-family: "Made Soul Maze", sans-serif;
+        overflow: scroll;
+      }
+      body::-webkit-scrollbar {
+        display: none;
+      }
+      h1 {
+        font-family: "Made Soul Maze", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="bg-[#0E231C] w-full text-white sm:block hidden">
+      <!-- nav bar  -->
+      <nav
+        class="w-full flex justify-between items-center px-[7vw] py-5 border-b absolute top-0"
+      >
+        <img src="/Week_1/Tailwind_Project/public/hack logo.svg" alt="" />
+        <!-- <img src="/hack logo.svg" alt="" /> -->
+        <div class="md:block hidden">
+          <ul class="flex items-center gap-[50px] font-sans">
+            <li class="opacity-50 hover:opacity-100 cursor-pointer">Home</li>
+            <li class="opacity-50 hover:opacity-100 cursor-pointer">About</li>
+            <li class="opacity-50 hover:opacity-100 cursor-pointer">
+              Community
+            </li>
+
+            <li
+              class="bg-white text-black px-[1vw] py-[0.5vw] rounded-sm cursor-pointer"
+            >
+              Join Us Now
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- hero section  -->
+      <div class="w-full px-[4vw]">
+        <div class="w-full h-[52.4vw] border-x flex justify-between pt-[10vw]">
+          <!-- text div  -->
+          <div class="p-[3.4vw] flex flex-col gap-3[vw]">
+            <div class="flex flex-col gap-[2.7vw]">
+              <div class="text-[6.5vw] leading-none upperase heroHeading">
+                <h1>ONCHAIN</h1>
+                <h1 class="flex items-center gap-[1vw]">
+                  <div class="bg-[#67CB30] w-[8vw] h-[1vw] mt-[1vw]"></div>
+                  SUMMER
+                </h1>
+                <h1>BUILDATHON</h1>
+              </div>
+              <p class="w-[40vw] text-[1.2vw] font-sans opacity-80">
+                Ready to make your mark? Apply now and get ready for an
+                unforgettable experience at OnHack Africa!
+              </p>
+            </div>
+            <!-- buttons -->
+            <div
+              class="flex items-center mt-[1vw] gap-[1.5vw] text-[1.1vw] rounded-sm"
+            >
+              <div
+                class="flex gap-1 items-center bg-white text-black px-[1.5vw] py-[0.9vw] rounded-sm cursor-pointer font-sans"
+              >
+                <h1 class="font-sans">Become a Builder</h1>
+                <img
+                  src="/Week_1/Tailwind_Project/public/arrow_outward.png"
+                  alt=""
+                />
+              </div>
+              <div
+                class="opacity-40 hover:opacity-100 cursor-pointer font-sans"
+              >
+                Know More
+              </div>
+            </div>
+          </div>
+          <!-- image  -->
+          <div class="w-[31vw]"></div>
+          <img
+            class="w-full"
+            src="/Week_1/Tailwind_Project/public/Element.png"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <!-- marquee section  -->
+      <div class="w-full overflow-hidden">
+        <div class="w-[200vw] marquee flex">
+          <div
+            class="w-[50%] bg-[#C568DE] p-4 flex justify-around text-[3vw] submarquee"
+          >
+            <h1>CREATE</h1>
+            <img src="/Week_1/Tailwind_Project/public/Star4.png" alt="" />
+            <!-- <img src="/Week_1/Tailwind_Project/public/Star4.png" alt="" /> -->
+            <h1>EXPLORE</h1>
+            <img src="/Week_1/Tailwind_Project/public/Star4.png" alt="" />
+            <!-- <img src="/Week_1/Tailwind_Project/public/Star4.png" alt="" /> -->
+            <h1>NETWORK</h1>
+            <img src="/Week_1/Tailwind_Project/public/Star4.png" alt="" />
+            <!-- <img src="/Week_1/Tailwind_Project/public/Star4.png" alt="" /> -->
+            <h1>BUILD</h1>
+            <img src="/Week_1/Tailwind_Project/public/Star4.png" alt="" />
+            <!-- <img src="/Week_1/Tailwind_Project/public/Star4.png" alt="" /> -->
+            <h1>INNOVATE</h1>
+            <img src="/Week_1/Tailwind_Project/public/Star4.png" alt="" />
+            <!-- <img src="/Week_1/Tailwind_Project/public/Star4.png" alt="" /> -->
+          </div>
+          <div
+            class="w-[50%] bg-[#C568DE] p-4 flex justify-around text-[3vw] submarquee"
+          >
+            <h1>CREATE</h1>
+            <img src="/Week_1/Tailwind_Project/public/Star4.png" alt="" />
+            <!-- <img src="/Week_1/Tailwind_Project/public/Star4.png" alt="" /> -->
+            <h1>EXPLORE</h1>
+            <img src="/Week_1/Tailwind_Project/public/Star4.png" alt="" />
+            <!-- <img src="/Week_1/Tailwind_Project/public/Star4.png" alt="" /> -->
+            <h1>NETWORK</h1>
+            <img src="/Week_1/Tailwind_Project/public/Star4.png" alt="" />
+            <!-- <img src="/Week_1/Tailwind_Project/public/Star4.png" alt="" /> -->
+            <h1>BUILD</h1>
+            <img src="/Week_1/Tailwind_Project/public/Star4.png" alt="" />
+            <!-- <img src="/Week_1/Tailwind_Project/public/Star4.png" alt="" /> -->
+            <h1>INNOVATE</h1>
+            <img src="/Week_1/Tailwind_Project/public/Star4.png" alt="" />
+            <!-- <img src="/Week_1/Tailwind_Project/public/Star4.png" alt="" /> -->
+          </div>
+        </div>
+      </div>
+      <!-- Second landing page  -->
+      <div class="bg-[#0E231C] w-full h-[6vw] text-white"></div>
+      <div class="bg-[#C568DE] w-full h-[100vh]">
+        <div class="flex justify-between">
+          <div
+            class="text-[3.4vw] flex-col gap-[0.1vw] ml-[6vw] mt-[4vw] font-weight-400 leading-[3.6vw]"
+          >
+            <div class="font-Made Soul Maze"><h1>WHY</h1></div>
+            <div><h1>PARTICIPATE?</h1></div>
+          </div>
+          <div
+            class="bg-white text-black h-[3.75vw] text-[1.4vw] pt-[0.83vw] pr-[1.4vw] pl-[0.83vw] pb-[1.4vw] items-center mt-[6vw] ml-[4vw] mr-[10.6vw] rounded-sm cursor-pointer w-[13vw] text-center font-face-grotesk pd-[8vw] font-sans"
+          >
+            <h2>Participate Now</h2>
+          </div>
+        </div>
+        <div class="width-full height-[52.4vw] flex ml-[2vw] font-sans">
+          <!-- Left column  -->
+          <div class="w-[25vw] bg-[#0E231C] mt-[4vw] ml-[4vw] text-[1.2vw]">
+            <div class="flex flex-col justify-center">
+              <img
+                class="w-[20vw] mt-[2.5vw] ml-[2.5vw] mr-[3vw]"
+                src="/Week_1/Tailwind_Project/public/Frame 53.png"
+                alt=""
+              />
+              <div class="text-[1.2vw] mt-[4vw] ml-[3vw] font-Made Soul Maze">
+                <h1>BOUNTIES</h1>
+              </div>
+              <div class="font-sans text-[1.2vw] opacity-80 ml-[3vw]">
+                <p>Win exciting prizes,</p>
+                <p>including cash rewards</p>
+                <p>and incubation support.</p>
+              </div>
+            </div>
+          </div>
+          <!-- middle column  -->
+          <div class="col-span-1 row-span-1 ml-[0.8vw] mt-[4vw]">
+            <div class="flex flex-col gap-[1vw] h-full">
+              <div
+                class="bg-[#0E231C] p-[1.6vw] h-full flex items-end gap-[1.6vw] h-[15vw]"
+              >
+                <img
+                  class="w-[10vw]"
+                  src="/Week_1/Tailwind_Project/public/Frame 3.svg"
+                  alt=""
+                />
+                <div class="w-[15vw] text-[1.2vw] flex flex-col gap-[1vw]">
+                  <h1>LEARNING</h1>
+                  <p class="opacity-80">
+                    Gain new skills, receive mentorship, and collaborate with
+                    fellow innovators.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="bg-[#0E231C] p-[1.6vw] h-full flex items-center gap-[1.6vw] h-[14vw]"
+              >
+                <img
+                  class="w-[12vw]"
+                  src="/Week_1/Tailwind_Project/public/Polygon 6.png"
+                  alt=""
+                />
+                <div class="w-[15vw] text-[1.2vw] flex flex-col gap-[1vw]">
+                  <h1 class="font-Made Soul Maze">NETWORKING</h1>
+                  <p class="opacity-80">
+                    Connect with industry leaders, potential investors, and
+                    other participants.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- right column  -->
+
+          <div
+            class="bg-[#0E231C] h-[30vw] w-[24vw] mt-[4vw] ml-[0.8vw] text-[1.2vw]"
+          >
+            <div class="mt-[1vw] mb-[6vw]">
+              <img
+                class="h-[19vw] w-[20vw]"
+                src="/Week_1/Tailwind_Project/public/Group 3.png"
+                alt=""
+              />
+              <div class="ml-[3vw] mb-[0vw] mt-[0vw]">
+                <h1>FUN</h1>
+              </div>
+
+              <div class="ml-[3vw] font-sans opacity-80">
+                <p>Enjoy game nights, build</p>
+                <p>lasting friendships, and be</p>
+                <p>part of a vibrant community.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <img
+            class="ml-[79vw] h-[15vw] mb-[5vw] pb-[4vw]"
+            src="/Week_1/Tailwind_Project/public/Ellipse 3 (1).png"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <!-- Third landing page  -->
+      <section class="">
+        <div class="w-[90vw] ml-[5vw] mt-[2vw]">
+          <!-- footer image  -->
+          <img
+            class="w-[82vw] ml-[2vw] object-cover"
+            src="/Week_1/Tailwind_Project/public/Footer Element.png"
+            alt=""
+          />
+        </div>
+        <div
+          class="mt-[0.5vw] border-y border-1 border-gray-400 flex flex-row h-[30vw]"
+        >
+          <div class="text-[4.1vw] ml-[6vw] mt-[4vw]">
+            <h1>FROM CREATIVES,</h1>
+            <h1>FOR CREATIVES.</h1>
+            <div class="font-sans text-[1.3vw] mt-[2vw]">
+              <ul class="flex flex-row gap-[5vw] mt-[0vw]">
+                <li class="opacity-50 hover:opacity-100"><p>About Us</p></li>
+                <li class="opacity-50 hover:opacity-100"><p>Contact Us</p></li>
+                <li class="opacity-50 hover:opacity-100"><p>FAQ's</p></li>
+              </ul>
+            </div>
+            <div class="flex gap-[2vw] mt-[2vw]">
+              <img
+                class="w-[1.5vw]"
+                src="/Week_1/Tailwind_Project/public/instagram.png"
+                alt=""
+              />
+              <img
+                class="w-[1.5vw]"
+                src="/Week_1/Tailwind_Project/public/facebook (1).png"
+                alt=""
+              />
+              <img
+                class="w-[1.5vw]"
+                src="/Week_1/Tailwind_Project/public/twitter.png"
+                alt=""
+              />
+              <img
+                class="w-[1.5vw]"
+                src="/Week_1/Tailwind_Project/public/Vector.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div
+            class="font-sans flex flex-col gap-[2vw] w-[35vw] h-[18vw] border border-gray-400 mt-[3vw] ml-[4vw]"
+          >
+            <div
+              class="font-sans font-medium leading-none text-[1.2vw] mt-[2vw] ml-[2vw]"
+            >
+              <h2>SUBSCRIBE FOR UPDATES</h2>
+            </div>
+            <div class="ml-[2vw] font-sans opacity-80 text-[1.2vw]">
+              <p>Subscribe to OnHack and never miss a update</p>
+              <p>and notification for Buildathon</p>
+            </div>
+            <div class="ml-[2vw] flex flex-row gap-[2vw]">
+              <input
+                class="px-[1.3vw] text-[1.3vw] bg-[#FFFFFF24] w-[20vw] h-[3.75vw]"
+                type="text"
+                placeholder="Enter Email Address"
+              />
+              <input
+                type="submit"
+                value="SUBMIT"
+                class="bg-white w-[8vw] text-black text-[1.3vw] font-500 h-[3.75vw]"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer
+        class="flex flex-row justify-between ml-[4vw] mr-[4vw] font-sans text-[1vw] h-[7vh] align-center"
+      >
+        <div class="hover:opacity-100 opacity-50 mt-[1vw]">
+          <h2>Terms & Conditions</h2>
+        </div>
+        <div class="hover:opacity-100 opacity-50 align-center mt-[1vw]">
+          <h2>&copy;Copyrights and All rights reserved</h2>
+        </div>
+        <div class="hover:opacity-100 opacity-50 mt-[1vw]">
+          <h2>Privacy Policy</h2>
+        </div>
+      </footer>
+    </main>
+    <main
+      class="bg-[#0E231C] h-screen w-full flex justify-center items-center text-white sm:hidden"
+    >
+      <div
+        class="flex flex-col justify-center items-center w-full bg-black p-3 bg-opacity-40"
+      >
+        <h1 class="text-2xl text-center">device not supported</h1>
+        <p class="text-sm text-center">switch to a larger screen</p>
+      </div>
+    </main>
+  </body>
+</html>
