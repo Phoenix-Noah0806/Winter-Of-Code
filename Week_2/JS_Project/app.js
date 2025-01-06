@@ -1,3 +1,5 @@
+const { todo } = require("node:test");
+
 function addtask() {
   const taskInput = document.getElementById("taskInput");
   const taskText = taskInput.value.trim(); //trim removes leading spaces
@@ -39,21 +41,28 @@ function addtask() {
     //delete button click functionality
     deleteButton.addEventListener("click", function () {
       task.remove();
+      save();
     });
     task.appendChild(deleteButton);
 
     document.getElementById("todo-list").appendChild(task);
+
+    save()
+   
   }
+  
 }
 function drag(event) {
   // event.dataTrasnfer.setData is used at time of dragging for transfering data
 
   event.dataTransfer.setData("text", event.target.closest(".task").id);
+  
 }
 
 function allowDrop(event) {
   event.preventDefault();
   event.stopPropagation();
+  
 }
 
 function drop(event) {
@@ -106,8 +115,11 @@ function drop(event) {
         draggedTask.classList.add("border-red-500");
       }
       targetColumn.appendChild(draggedTask);
+      save()
     }
   }
+  
+  
 }
 
 document.getElementById("todo").addEventListener("dragover", allowDrop);
@@ -118,4 +130,38 @@ document.getElementById("backlog").addEventListener("dragover", allowDrop);
 document.getElementById("todo").addEventListener("drop", drop);
 document.getElementById("inprogress").addEventListener("drop", drop);
 document.getElementById("done").addEventListener("drop", drop);
-document.getElementById("todo").addEventListener("backlog", drop);
+document.getElementById("backlog").addEventListener("drop", drop);
+
+// localStorage
+
+
+function save() {
+  const columns = ['todo', 'inprogress', 'done', 'backlog'];
+  columns.forEach(columnId => {
+      const column = document.getElementById(columnId);
+      const tasks = Array.from(column.children).map(task => {
+          return {
+              id: task.id,
+              content: task.querySelector('.task-content').textContent,
+              classList: Array.from(task.classList)
+          };
+      });
+      console.log(`Saving tasks for ${columnId}:`, tasks);
+      localStorage.setItem(columnId, JSON.stringify(tasks));
+  });
+}
+
+function loadTasks() {
+  const columns = ['todo', 'inprogress', 'done', 'backlog'];
+  columns.forEach(columnId => {
+      const tasks = JSON.parse(localStorage.getItem(columnId)) || [];
+      console.log(`Loading tasks for ${columnId}:`, tasks);
+      tasks.forEach(taskData => {
+          // Task creation logic
+      });
+  });
+}
+document.addEventListener('DOMContentLoaded', loadTasks);
+
+
+
