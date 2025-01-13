@@ -132,36 +132,6 @@ document.getElementById("inprogress").addEventListener("drop", drop);
 document.getElementById("done").addEventListener("drop", drop);
 document.getElementById("backlog").addEventListener("drop", drop);
 
-// localStorage
-
-
-function save() {
-  const columns = ['todo', 'inprogress', 'done', 'backlog'];
-  columns.forEach(columnId => {
-      const column = document.getElementById(columnId);
-      const tasks = Array.from(column.children).map(task => {
-          return {
-              id: task.id,
-              content: task.querySelector('.task-content').textContent,
-              classList: Array.from(task.classList)
-          };
-      });
-      console.log(`Saving tasks for ${columnId}:`, tasks);
-      localStorage.setItem(columnId, JSON.stringify(tasks));
-  });
-}
-
-function loadTasks() {
-  const columns = ['todo', 'inprogress', 'done', 'backlog'];
-  columns.forEach(columnId => {
-      const tasks = JSON.parse(localStorage.getItem(columnId)) || [];
-      console.log(`Loading tasks for ${columnId}:`, tasks);
-      tasks.forEach(taskData => {
-          // Task creation logic
-      });
-  });
-}
-document.addEventListener('DOMContentLoaded', loadTasks);
 
 
 

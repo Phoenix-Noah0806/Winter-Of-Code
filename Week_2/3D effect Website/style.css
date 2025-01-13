@@ -1,0 +1,14 @@
+.soda{
+    --left:0vw;
+    background: var(--url) var(--left), url(sodacan.png);
+    background-size: auto 100%;
+    height: 45vw;
+    width: 25vw;
+    background-blend-mode: multiply ;
+    mask-image: url(sodacan.png);
+    mask-size: auto 100%;
+    transition:  0.8;
+}
+.soda::hover{
+    --left: -50vw;
+}
